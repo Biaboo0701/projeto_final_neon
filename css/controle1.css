@@ -1,91 +1,79 @@
 body {
-    /*Estilizando o nosso body com uma imagem de fundo, fonte
-    font-family: nunito sans, sans serif;
-    background-image:url(../img/fundo.jpg);
-    position: relative;  */
-    height: 100%;
-    background: -webkit-linear-gradient(#4077af, #007a7b); 
-    background-repeat: no-repeat;
+  font-family: nunito sans, sans serif;
+  background: -webkit-linear-gradient(#0caaf1, #0ca5a5);
+  height: 100vh;
 }
 
 header {
-    padding: 10px;
-    color: #fff;
-    text-align: center;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
 }
 
-main {/*
-    padding: 30px 50px;*/
-}
-
-h1, h2, .botoa {
-    color: black;
+main {
+  padding: 30px 50px;
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-width: 80%;
-    padding:20px;
-    margin: 15px auto 0 auto;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
 }
 
 .lineInput {
-    display: grid;
-    margin-bottom: 10px;
+  display: grid;
+  margin-bottom: 10px;
 }
 
 input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    outline: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: 0;
 }
 
 button {
-    border: 0px;
-    padding: 10px;
-    outline: 0;
-    background-color: #5f7c8a;
-    color: #fff;
-    border-radius: 1px;
-    font-weight: bold;
-    transition: all ease 0.3s;
+  border: 0px;
+  padding: 10px;
+  outline: 0;
+  background-color: #ffc800;
+  color: #111;
+  border-radius: 1px;
+  font-weight: bold;
+  transition: all ease 0.3s;
 }
 
 button:hover {
-    background-color: #274f63;
-}
-
-.content {
-    width: 100%;
-    max-width: 86%;
-    margin: 0 auto;
+  background-color: #e6b400;
+  cursor: pointer;
 }
 
 table {
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    background-color: rgb(214, 214, 214);
-    width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
 table th {
-    background-color: rgb(214, 214, 214);
+  background-color: #adadad;
 }
 
-table th, td {
-    padding: 1px 5px;
-    text-align: left;
+table th,
+td {
+  padding: 1px 5px;
+  text-align: left;
+}
+
+td {
+  background-color: rgb(240, 240, 240);
 }
 
 table td img {
-    width: 22px;
+  width: 22px;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
