@@ -21,28 +21,46 @@
     <main>
       <form method="dialog">
         <div class="card">
+          <!--Descriçãp-->
           <div class="lineInput">
             <label>Descrição</label>
-            <input type="text" id="produto" placeholder="Descrição" required />
+            <input
+              type="text"
+              id="produto"
+              placeholder="Descrição"
+              required
+              maxlength="50"
+            />
             <span class="error"></span>
           </div>
+
+          <!--Valor-->
           <div class="lineInput">
             <label>Valor</label>
             <input
               type="text"
               id="preco"
               placeholder="Valor do produto"
+              maxlength="15"
               required
             />
             <span class="error"></span>
           </div>
 
+          <!--Data-->
           <div class="lineInput">
             <label>Data</label>
-            <input type="text" id="data" required />
+            <input
+              type="text"
+              id="data"
+              placeholder="dd/mm/aaaa"
+              required
+              pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
+            />
             <span class="error"></span>
           </div>
 
+          <!--Botão salvar-->
           <button
             class="botoa"
             type="submit"
@@ -51,10 +69,13 @@
           >
             Salvar
           </button>
+
+          <!--Botão cancelar-->
           <button class="botoa" onclick="produto.cancelar()">Cancelar</button>
         </div>
       </form>
 
+      <!--Tabalea-->
       <div class="content">
         <table border="1">
           <thead>
