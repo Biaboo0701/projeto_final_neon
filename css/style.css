@@ -8,14 +8,9 @@ body {
   background-image: url(../img/fundo.jpg);
 }
 
-#0CA9F1
-
-
-form {
+#0CA9F1 form {
   background-color: white;
-  color: #0CA9F1
-  #0CA4A4
-  #00A3EF
+  color: #0ca9f1;
   max-width: 500px;
   width: 70%;
   padding: 20px;
@@ -32,7 +27,7 @@ form h1 {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-form input[type='text'],
+form input[type='email'],
 form input[type='password'] {
   width: 100%;
   height: 45px;
