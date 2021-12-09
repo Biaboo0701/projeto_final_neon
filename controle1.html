@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" type="text/css" href="css/controle1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Gestão dos meus Gastos</h1>
+    </header>
+
+    <main>
+      <form method="dialog">
+        <div class="card">
+          <!--Descriçãp-->
+          <div class="lineInput">
+            <label>Descrição</label>
+            <input
+              type="text"
+              id="produto"
+              placeholder="Descrição"
+              required
+              maxlength="50"
+            />
+            <span class="error"></span>
+          </div>
+
+          <!--Valor-->
+          <div class="lineInput">
+            <label>Valor</label>
+            <input
+              type="text"
+              id="preco"
+              placeholder="Valor do produto"
+              maxlength="15"
+              required
+            />
+            <span class="error"></span>
+          </div>
+
+          <!--Data-->
+          <div class="lineInput">
+            <label>Data</label>
+            <input
+              type="text"
+              id="data"
+              placeholder="dd/mm/aaaa"
+              required
+              pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
+            />
+            <span class="error"></span>
+          </div>
+
+          <!--Botão salvar-->
+          <button
+            class="botoa"
+            type="submit"
+            onclick="produto.salvar()"
+            id="btn1"
+          >
+            Salvar
+          </button>
+
+          <!--Botão cancelar-->
+          <button class="botoa" onclick="produto.cancelar()">Cancelar</button>
+        </div>
+      </form>
+
+      <!--Tabalea-->
+      <div class="content">
+        <table border="1">
+          <thead>
+            <th class="center">ID</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th class="center">Ações</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="js/controle1.js"></script>
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script src="jquery/jquery.mask.js"></script>
+    <script src="jquery/masks.js"></script>
+    <script src="js/validacao.js"></script>
+  </body>
+</html>
