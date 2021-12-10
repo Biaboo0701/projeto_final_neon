@@ -12,17 +12,20 @@
       <h1>Efetuar Login</h1>
 
       <div class="input">
+        <!--Email-->
         <input
           id="email"
           type="email"
           name="email"
           placeholder="Seu e-mail..."
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           required
         />
         <span class="error"></span>
       </div>
 
       <div class="input">
+        <!--Senha-->
         <input
           id="password"
           type="password"
