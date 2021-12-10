@@ -64,6 +64,6 @@ button:hover {
 
 #wave {
   z-index: -1;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
