@@ -6,26 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
   </head>
   <body>
+    <header>
+    <div class="logo-header">
+      <img src="img/logo.png" alt="">
+  </div>
+</header>
+<div class="main">
+  <h2>GERENCIE O SEU DINDIN AQUI💰</h2>
+    
     <form>
-      <h1>Efetuar Login</h1>
+      <h3>Efetuar Login</h3>
 
       <div class="input">
-        <!--Email-->
         <input
           id="email"
           type="email"
           name="email"
           placeholder="Seu e-mail..."
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           required
         />
         <span class="error"></span>
       </div>
 
       <div class="input">
-        <!--Senha-->
         <input
           id="password"
           type="password"
@@ -37,8 +43,17 @@
       </div>
 
       <input type="submit" name="acao" value="Enviar..." />
-    </form>
 
+      <div>
+        <div class="cadastre-se">
+          <a href=""><i>Cadastre-se!</i></a>
+      </div>
+        <div class="esqueci-senha">
+            <a href=""><i>Esqueci a minha senha!</i></a>
+        </div>
+      </div>
+    </form>
+  
     <script src="js/script.js"></script>
     <script src="js/validacao.js"></script>
   </body>

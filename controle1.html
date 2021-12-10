@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Controle Financeiro</title>
     <link rel="stylesheet" type="text/css" href="css/controle1.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,53 +15,53 @@
     />
   </head>
   <body>
-    <header>
-      <h1>Gestão dos meus Gastos</h1>
-    </header>
+    <header class="header">
+      <div class="logo-header">
+          <img src="img/logo.png" alt="">
+      </div>
+      <div class="nav-menu">
+
+          <input type="checkbox" id="check">
+          <label for="check" class="check-button">
+              <i class="menu-icon"><img src="img/menu.PNG" alt=""></i>
+
+          </label>
+          <ul>
+              <li><a onclick="clickedLink()" href="#nicio">INICIO</a></li>
+              <li><a onclick="clickedLink()" href="#novo_lancamento">NOVO LANÇAMENTO</a></li>
+              <li><a onclick="clickedLink()" href="#meus_lancamentos">MEUS LANÇAMENTOS</a></li>
+              <li><a class="logout" onclick="clickedLink()" href="#sair">SAIR</a></li>
+          </ul>
+      </div>
+  </header> 
 
     <main>
+      <h1>Gestão dos meus Gastos</h1>
       <form method="dialog">
         <div class="card">
-          <!--Descriçãp-->
           <div class="lineInput">
             <label>Descrição</label>
-            <input
-              type="text"
-              id="produto"
-              placeholder="Descrição"
-              required
-              maxlength="50"
-            />
+            <input type="text" id="produto" placeholder="Descrição" maxlength="50" required />
             <span class="error"></span>
           </div>
-
-          <!--Valor-->
           <div class="lineInput">
             <label>Valor</label>
             <input
               type="text"
               id="preco"
               placeholder="Valor do produto"
-              maxlength="25"
+              maxlength="12"
               required
             />
             <span class="error"></span>
           </div>
 
-          <!--Data-->
           <div class="lineInput">
             <label>Data</label>
-            <input
-              type="text"
-              id="data"
-              placeholder="dd/mm/aaaa"
-              required
-              pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
-            />
+            <input type="text" id="data" required />
             <span class="error"></span>
           </div>
 
-          <!--Botão salvar-->
           <button
             class="botoa"
             type="submit"
@@ -69,13 +70,10 @@
           >
             Salvar
           </button>
-
-          <!--Botão cancelar-->
           <button class="botoa" onclick="produto.cancelar()">Cancelar</button>
         </div>
       </form>
 
-      <!--Tabalea-->
       <div class="content">
         <table border="1">
           <thead>
@@ -89,6 +87,31 @@
         </table>
       </div>
     </main>
+
+    <footer class="contatos">
+      <h2 id="contatos">Dúvidas!?</h2><br>
+       Favor entrar em contato conosco nas seguintes redes sociais:
+      </p><br>
+      <div class="email">✉️futuros@neowners.com</div>
+      <div class="rede">
+          <div class="icone">
+              <a href="https://pt-br.facebook.com/timeneon/"><i class="fa fa-facebook" aria-hidden="true" class="icone"></i></a>
+          </div>
+          <div class="icone">
+              <a href="https://www.instagram.com/timeneon/?hl=pt-br"><i class="fa fa-instagram" aria-hidden="true" class="icone"></i></a>
+          </div>
+          <div class="icone">
+              <a href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB" class="icone"><i class="fa fa-twitter" aria-hidden="true"></i></a>   
+          </div>
+          <div class="icone">
+              <a href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"><i class="fa fa-linkedin" aria-hidden="true" class="icone"></i></a>
+          </div>
+          <div class="icone">
+              <a href="https://www.youtube.com/channel/UCh0hogVKGu8Wx5i6lwudPEg"><i class="fa fa-youtube" aria-hidden="true" class="icone"></i></a>
+      </div>
+  
+  <p class="identificacao">&COPY; 2021  Neowners</p>
+      </footer> 
 
     <script src="js/controle1.js"></script>
     <script src="jquery/jquery-3.6.0.min.js"></script>

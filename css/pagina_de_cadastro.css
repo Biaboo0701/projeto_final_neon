@@ -1,5 +1,5 @@
 body {
-    background: -webkit-linear-gradient(#4077af, #007a7b);
+    background: -webkit-linear-gradient(#0DD8D8, #0CA5A5, #0046A0);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -17,15 +17,16 @@ header {
     top: 0;
 }
 
+.logo-header img{
+    border-color: black;
+    border-radius: 20%;
+    width: 120px;
+  }
 
-header img {
-    width: 200px;
-    padding-top: 2em;
-}
 
 .menu_list {
    list-style: none;
-   padding: 2em;
+   padding: 0.01em;
    text-align: right;
    font-size: large;
 }
@@ -37,7 +38,6 @@ header img {
 .menu_list li a {
    color:black;
    font-size: 30px;
-
    text-decoration: none;
 }
 
