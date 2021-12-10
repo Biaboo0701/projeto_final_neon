@@ -1,0 +1,42 @@
+ body {
+    font-family: nunito sans, sans serif;
+    background: -webkit-linear-gradient(#0caaf1, #0ca5a5);
+   
+  }
+
+  header {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  main {
+    padding-top: 10rem;
+	  height: 785px;
+    text-align: center;
+  }  
+
+
+
+  button {
+    margin-top: 6rem;
+    border: 0px;
+    padding: 10px;
+    outline: 0;
+    background-color: #ffc800;
+    color: #111;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+    width: 28rem;
+    height: 3rem;
+    font-size: 15px;
+  }
+  
+  button:hover {
+    background-color: #e6b400;
+    cursor: pointer;
+  }
+  
