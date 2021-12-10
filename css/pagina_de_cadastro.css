@@ -1,154 +1,164 @@
-body {
-    background: -webkit-linear-gradient(#4077af, #007a7b);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-blend-mode: multiply;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* HEADER */
-
-header {
-    padding: 1em;
-    width: 110%;
-    background: #FFC800;
-    position: fixed;
-    top: 0;
+nav {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
-
-header img {
-    width: 200px;
-    padding-top: 2em;
+.logo {
+  max-width: 10rem;
 }
 
 .menu_list {
-   list-style: none;
-   padding: 2em;
-   text-align: right;
-   font-size: large;
+  list-style: none;
+  padding: 2em;
+  text-align: right;
+  font-size: large;
 }
 
 .menu_list li {
-   display: inline-block;
+  display: inline-block;
 }
 
 .menu_list li a {
-   color:black;
-   font-size: 30px;
+  color: black;
+  font-size: 30px;
 
-   text-decoration: none;
+  text-decoration: none;
 }
 
-.menu_list li a:hover{
-   color:white;
+.menu_list li a:hover {
+  color: white;
 }
-
 
 /* MAIN/PRINCIPAL */
 
 .bloco {
-    border: 2px solid rgb(212, 184, 23);;   
-    padding: 3em; 
-    width: 50%;
-    margin: auto;
-    margin-top: 12em;
-    margin-bottom: 7em;
-    border-radius: 10px;
+  background-color: #fff;
+  padding: 0.5rem;
+  width: 40%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-main h2 {
-    text-align: center;
-    color: white;
-    font-family:'Inter', sans-serif;
-    font-size: 2em;
-    margin-bottom: 1em;
-    font-weight: bold;
+main h1 {
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
+  font-weight: bold;
 }
 
 main form {
-    padding: 1em;
-    text-align: center;
+  padding: 1em;
+  text-align: center;
 }
 
-.campoInteiro, .meioCampo, #rua, #numero {
-    padding: 1em;
-    margin: 1em;
-    border-radius: 10px;
+.campoInteiro,
+.meioCampo,
+#rua,
+#numero {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 10px;
 }
 
 .campoInteiro {
-    width: 85%;
+  width: 85%;
 }
 
 .meioCampo {
-   width: 40%; 
+  width: 40%;
 }
 
 #rua {
-    width: 60%;
+  width: 60%;
 }
 
 #numero {
-    width: 20%;
+  width: 20%;
 }
 
 #botaoContinuar {
-    border-radius: 10px;
-    font-weight: bold;
-    width: 85%;
-    height: 4em;
-    margin-top: 2em;
+  border-radius: 10px;
+  font-weight: bold;
+  width: 85%;
+  height: 4em;
+  margin-top: 2em;
+  background-color: #ffc800;
 }
 
 #botaoContinuar:hover {
-    transform: scale(1.1);
-    background:rgb(212, 184, 23);
-    color: rgb(0,0,0);
+  background: #e6b400;
+  color: rgb(0, 0, 0);
 }
-
 
 /* FOOTER */
 
 footer {
-    display: flex;
-    background-color: #FFC800;
-    justify-content: center;
-    padding: 3em;
-    margin-top: 1em;
-    width: 100%;
+  display: flex;
+  background-color: #ffc800;
+  justify-content: center;
+  padding: 3em;
+  margin-top: 1em;
+  width: 100%;
 }
- 
+
 footer p {
-    color: black;
-    padding-left: 4em;
-    font-size: 1em;
+  color: black;
+  padding-left: 4em;
+  font-size: 1em;
 }
 
+footer p a {
+  color: black;
+  text-decoration: none;
+}
 
-footer p a { 
-    color: black;
-    text-decoration: none;
-}   
+#wave {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+}
 
 /* TOAST */
 
 .toast {
-    margin: auto;
-    width: 29%;
+  margin: auto;
+  width: 29%;
 }
-
-
-
 
 /* MEDIA QUERY - MOBILE */
 
-@media screen and (max-width:950px) {
-    
-    .campoInteiro, .meioCampo, #rua, #numero, #botaoContinuar {
-       width: 100%; 
-       margin-left: -1em;
-       margin-right: -1em;
-    }
+@media screen and (max-width: 950px) {
+  * {
+    font-size: 30px;
+  }
+  .bloco {
+    width: 100%;
+    height: 75%;
+  }
+  .campoInteiro,
+  .meioCampo,
+  #rua,
+  #numero,
+  #botaoContinuar {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
 }

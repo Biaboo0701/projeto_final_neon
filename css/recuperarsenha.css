@@ -1,82 +1,112 @@
-*{
-    margin: 1;
-    padding: 1;
-    border-radius: 30px;
-    padding: 10px 50px 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    
-    body{
-        background-color: #0DA9F1;
-    }
-    
-    form {
-        background-color: white;
-        max-width: 500px;
-        width: 70%;
-        padding: 20px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
-    
-    form h3 {
-        text-align: center;
-        color: black;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 30px;
+  font-family: 'Roboto', sans-serif;
+}
 
-    form p {
-        text-align: center;
-        margin-top: 0px;
-    }
+/* Notas do Augusto */
+/* Encontrei varios errinhos bestas no seu codigo, como por exemplo o uso que vc fez do seletor global "*"
+   Sei que ele pode parecer uma forma facil de resolver algumas coisas, mas vc deve o usar o minimo possivel colocando apenas o essencial nele.
+   sempre coloque margin e padding igual a 0 no "*" por causa de uma tecnica chamada cross browser, recomendo que pesquise essa tecnica.
+   Também recomendo que utilize class com nomes que tenham a ver com o objeto, ultilizar texto1 , texo2, texto3 não é recomendado e em projetos maiores atrapalham a compressão dos outros programadores ao ler teu código.
+    :)
+ */
 
-    form input[class=text2] {
-        width: 100%;
-    }
-    
-    form input[class=text] {
-        width: 100px;
-        height: 40px;
-        border: 1px solid #ccc;
-        padding-left: 2px;
-        margin: 1% 0;
-        border-radius: 20px;
-        text-align: center;
-        transition: 1s;
-    }
-    
-    form input[class=submit]{
-        width: 100%;
-        height: 40px;
-        cursor: pointer;
-        background: #FFC700;
-        color: white;
-        border: 0;
-        border-radius: 20px;
-        text-align: center;
-        transition: 1s;
-        margin: 1% 0;
-    }
+body {
+  height: 100vh;
+}
 
-    form input[class=voltar]{
-        width: 100%;
-        height: 40px;
-        cursor: pointer;
-        background: transparent;
-        color: black;
-        border: 0;
-        border-radius: 20px;
-        text-align: center;
-        transition: 1s;
-        margin: 1% 0;
-    }
-    
-    form input[class=submit]:hover{
-        background-color: #E6B400;
-    }
+nav {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
 
-    form input[class=voltar]:hover{
-        background-color: #D0CBC6;
-    }
+.logo {
+  max-width: 10rem;
+}
+
+form {
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  max-width: 500px;
+  width: 70%;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+form p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form input[class='text2'] {
+  width: 100%;
+  height: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+form input[class='text'] {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding-left: 2px;
+  margin: 1% 0;
+  border-radius: 20px;
+  text-align: center;
+  transition: 1s;
+}
+
+form input[class='submit'] {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  background: #ffc700;
+  color: white;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  transition: 1s;
+  margin: 1% 0;
+}
+
+form input[class='voltar'] {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  transition: 1s;
+  margin: 1% 0;
+}
+
+form input[class='submit']:hover {
+  background-color: #e6b400;
+}
+
+form input[class='voltar']:hover {
+  background-color: #d0cbc6;
+}
+
+#wave {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+}

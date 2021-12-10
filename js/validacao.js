@@ -36,7 +36,7 @@ function validateField(field) {
         valueMissing: 'preencha com uma uma data, por favor',
         typeMismatch: 'Por favor use uma data válida'
       },
-      password: {
+      number: {
         valueMissing: 'Por favor, preencha este campo'
       }
     }

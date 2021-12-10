@@ -12,109 +12,230 @@ Campos de endereço (estado, cidade, bairro, rua, numero, complemento)
 <!DOCTYPE html>
 
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Página Cadastro Usuário</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/pagina_de_cadastro.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="reset.css">
-        <title> Página Cadastro Usuário </title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/pagina_de_cadastro.css">
-    </head>
+  <body>
+    <nav class="navbar navbar-expand-lg justify-content-end">
+      <a href="#" class="navbar-brand"
+        ><img src="img/logo.png" alt="Logo neowners" class="logo"
+      /></a>
+    </nav>
+    <main>
+      <div class="bloco">
+        <h1>Criar Conta</h1>
+        <form>
+          <input
+            type="text"
+            class="campoInteiro"
+            class="requisito"
+            class="limpa"
+            required
+            placeholder="Nome"
+          />
+          <input
+            type="email"
+            class="campoInteiro"
+            class="requisito"
+            class="limpa"
+            id="email"
+            pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+            required
+            placeholder="E-mail"
+          />
+          <input
+            type="password"
+            class="meioCampo"
+            class="requisito"
+            class="limpa"
+            id="senha1"
+            required
+            placeholder="Senha"
+          />
+          <input
+            type="password"
+            class="meioCampo"
+            class="requisito"
+            class="limpa"
+            id="senha2"
+            required
+            placeholder="Confirmação de Senha"
+          />
+          <input
+            type="text"
+            class="meioCampo"
+            class="requisito"
+            class="limpa"
+            pattern="(^\d{1,2}).?(\d{3}).?(\d{3})-?(\d{1}|X|x$)"
+            required
+            placeholder="RG"
+          />
+          <input
+            type="text"
+            class="meioCampo"
+            class="requisito"
+            class="limpa"
+            id="cep"
+            pattern="(^[0-9]{5})-?([0-9]{3}$)"
+            required
+            placeholder="CEP"
+          />
+          <input
+            type="text"
+            id="rua"
+            class="requisito"
+            class="limpa"
+            required
+            placeholder="Rua"
+          />
+          <input
+            type="number"
+            id="numero"
+            class="requisito limpa"
+            required
+            placeholder="Número"
+          />
+          <input
+            type="text"
+            class="meioCampo limpa"
+            required
+            placeholder="Complemento"
+          />
+          <input
+            type="text"
+            class="meioCampo requisito limpa"
+            id="cidade"
+            required
+            placeholder="Cidade"
+          />
+          <input
+            type="text"
+            class="requisito limpa meioCampo"
+            id="bairro"
+            required
+            placeholder="Bairro"
+          />
+          <input
+            type="text"
+            class="requisito limpa meioCampo"
+            class=""
+            id="estado"
+            required
+            placeholder="Estado"
+          />
+          <input type="submit" value="Continuar" id="botaoContinuar" />
+        </form>
+      </div>
+    </main>
 
-    <body>
-        <header class="row">
-            <div class="row">
-                
-                <div class="col-8">
-                    <ul class="menu_list">
-                        <li>
-                            <a href="/paginalogin/Formulario_Login.html" href="">
-                                <span class="mdi mdi-account text-black"></span> 
-                                LOGIN
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+    <div
+      class="toast align-items-center text-white bg-primary border-0"
+      style="position: absolute; top: 30%; right: 35%"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      id="toast-confimacao"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Cadastro realizado com sucesso!</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
 
-        <main>
-
-            <div class="bloco">
-                <h2> Criar Conta </h2>
-                <form>
-                    <input type="text" class="campoInteiro" class="requisito" class="limpa" required placeholder="Nome">
-                    <input type="email" class="campoInteiro" class="requisito" class="limpa" id="email" required placeholder="E-mail">
-                    <input type="password" class="meioCampo" class="requisito" class="limpa" id="senha1" required placeholder="Senha">
-                    <input type="password" class="meioCampo" class="requisito" class="limpa" id="senha2" required placeholder="Confirmação de Senha">
-                    <input type="text" class="meioCampo" class="requisito" class="limpa" required placeholder="RG"> 
-                    <input type="text" class="meioCampo" class="requisito" class="limpa" id="cep" required placeholder="CEP">
-                    <input type="text" id="rua" class="requisito" class="limpa" required placeholder="Rua">
-                    <input type="number" id="numero" class="requisito" class="limpa" required placeholder="Número">
-                    <input type="text" class="meioCampo" class="limpa" placeholder="Complemento">
-                    <input type="text" class="meioCampo" class="requisito" class="limpa" id="cidade" required placeholder="Cidade">
-                    <input type="text" class="meioCampo" class="requisito" class="limpa" id="bairro" required placeholder="Bairro">
-                    <input type="text" class="meioCampo" class="requisito" class="limpa" id="estado" required placeholder="Estado">
-                    <input type="submit" value="Continuar" id="botaoContinuar">
-                </form>
-
-            </div>
-        </main>
-
-        <div class="toast align-items-center text-white bg-primary border-0" style="position: absolute; top: 30%; right: 35%" role="alert" aria-live="assertive"
-        aria-atomic="true" id="toast-confimacao">
-            <div class="d-flex">
-                <div class="toast-body">
-                Cadastro realizado com sucesso!
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                aria-label="Close"></button>
-            </div>
+    <div
+      class="toast align-items-center top-center text-white bg-danger border-0"
+      style="position: absolute; top: 100%; right: 35%"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="false"
+      id="toast-erro"
+    >
+      <div class="d-flex">
+        <div class="toast-body">
+          Houve um erro! Favor verificar os campos preenchidos!
         </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
 
-        <div class="toast align-items-center top-center text-white bg-danger border-0" style="position: absolute; top: 100%; right: 35%" role="alert" aria-live="assertive"
-        aria-atomic="false" id="toast-erro">
-            <div class="d-flex">
-                <div class="toast-body">
-                Houve um erro! Favor verificar os campos preenchidos!
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                aria-label="Close"></button>
-            </div>
+    <div
+      class="toast align-items-center top-center text-white bg-danger border-0"
+      style="position: absolute; top: 75%; right: 30%"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="false"
+      id="toast-erro-cep"
+    >
+      <div class="d-flex">
+        <div class="toast-body">
+          CEP não encontrado! Favor inserir um CEP válido utilizando apenas
+          números!
         </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
 
-        <div class="toast align-items-center top-center text-white bg-danger border-0" style="position: absolute; top: 75%; right: 30%" role="alert" aria-live="assertive"
-        aria-atomic="false" id="toast-erro-cep">
-            <div class="d-flex">
-                <div class="toast-body">
-                CEP não encontrado! Favor inserir um CEP válido utilizando apenas números!
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                aria-label="Close"></button>
-            </div>
-        </div>
+    <div
+      class="toast align-items-center top-center text-white bg-danger border-0"
+      style="position: absolute; top: 65%; right: 30%"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="false"
+      id="toast-erro-senha"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Verifique novamente a senha digitada!</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
 
-        <div class="toast align-items-center top-center text-white bg-danger border-0" style="position: absolute; top: 65%; right: 30%" role="alert" aria-live="assertive"
-        aria-atomic="false" id="toast-erro-senha">
-            <div class="d-flex">
-                <div class="toast-body">
-                Verifique novamente a senha digitada!
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                aria-label="Close"></button>
-            </div>
-        </div>
-
-        <footer>
+    <!-- <footer>
             <p> Política de privacidade </p>
             <p> Termos de uso </p>
             <p> @2021  Todos os direitos reservados </p>
             <p> <a target="_blanck" href="">Entre em contato conosco</a></p>
-        </footer>
-
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="js/pagina_de_cadastro.js"></script>
+        </footer> -->
+  </body>
+  <img src="img/waves_svg/wave-cadastro.svg" id="wave" alt="wave cadastro" />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/validacao.js"></script>
+  <script src="js/pagina_de_cadastro.js"></script>
 </html>
