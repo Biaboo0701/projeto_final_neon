@@ -5,15 +5,17 @@
 }
 
 body {
-  height: 100vh;
-  background-image: url(../img/wave.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position-y: bottom;
+  background-image: url(../img/fundo.jpg);
 }
 
+#0CA9F1
+
+
 form {
-  color: #0ca9f1;
+  background-color: white;
+  color: #0CA9F1
+  #0CA4A4
+  #00A3EF
   max-width: 500px;
   width: 70%;
   padding: 20px;
@@ -24,17 +26,14 @@ form {
 }
 
 form h1 {
-  color: #f2f2f2;
   text-align: center;
-  background-color: #4c626d;
-  border-radius: 10px 10px 0 0;
+  background-color: #5f7c8a;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-form input[type='email'],
+form input[type='text'],
 form input[type='password'] {
-  border-radius: 5px;
   width: 100%;
   height: 45px;
   border: 1px solid #ccc;

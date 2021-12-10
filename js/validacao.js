@@ -25,7 +25,8 @@ function validateField(field) {
       },
       email: {
         valueMissing: 'Email é obrigatório',
-        typeMismatch: 'Por favor use um email válido'
+        typeMismatch: 'Por favor use um email válido',
+        patternMismatch: 'Por favor use um email válido'
       },
       password: {
         valueMissing: 'Senha é obrigatório',
