@@ -104,6 +104,53 @@ form input[class='voltar']:hover {
   background-color: #d0cbc6;
 }
 
+.center {
+  text-align: center;
+}
+
+.rede {
+  display: inline-block;
+  line-height: inherit;
+}
+
+
+.icone{
+  width: 40px;
+  height: 40px;    
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 5px;
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  top: 0;    
+}
+
+.icone i{    
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+  text-decoration: none;
+  color: #000; 
+}
+
+.icone i a{     
+  text-decoration: none;
+  color: #000; 
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 80%;
+  }
+
 #wave {
   z-index: -1;
   position: fixed;

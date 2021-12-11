@@ -1,14 +1,3 @@
-<!--
-Castro deve conter: 
-Nome,
-E-mail,
-Senha,
-Confirmação senha,
-RG,
-CEP (Opcional API correio)
-Campos de endereço (estado, cidade, bairro, rua, numero, complemento) 
--->
-
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -27,14 +16,26 @@ Campos de endereço (estado, cidade, bairro, rua, numero, complemento)
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/pagina_de_cadastro.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg justify-content-end">
       <a href="#" class="navbar-brand"
-        ><img src="img/logo.png" alt="Logo neowners" class="logo"
-      /></a>
-    </nav>
+      ><img src="img/logo.png" alt="Logo neowners" class="logo"/></a>
+    <div class="nav-menu">
+
+      <input type="checkbox" id="check">
+      <label for="check" class="check-button">
+          <i class="menu-icon"><img src="img/menu.PNG" alt=""></i>
+
+      </label>
+      <ul>
+          <li><a class="login" onclick="clickedLink()" href="#logar">LOGIN</a></li>
+      </ul>
+    </div>
+  </nav>
+
     <main>
       <div class="bloco">
         <h1>Criar Conta</h1>
@@ -226,14 +227,32 @@ Campos de endereço (estado, cidade, bairro, rua, numero, complemento)
           aria-label="Close"
         ></button>
       </div>
-    </div>
+    </div><br>
 
-    <!-- <footer>
-            <p> Política de privacidade </p>
-            <p> Termos de uso </p>
-            <p> @2021  Todos os direitos reservados </p>
-            <p> <a target="_blanck" href="">Entre em contato conosco</a></p>
-        </footer> -->
+    <footer class="contatos">
+      <h2 id="contatos">Dúvidas!?</h2><br>
+       Favor entrar em contato conosco nas seguintes redes sociais:
+      </p><br>
+      <div class="email">✉️futuros@neowners.com</div>
+      <div class="rede">
+          <div class="icone">
+              <a href="https://pt-br.facebook.com/timeneon/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </div>
+          <div class="icone">
+              <a href="https://www.instagram.com/timeneon/?hl=pt-br"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+          <div class="icone">
+              <a href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"><i class="fa fa-twitter" aria-hidden="true"></i></a>   
+          </div>
+          <div class="icone">
+              <a href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+          <div class="icone">
+              <a href="https://www.youtube.com/channel/UCh0hogVKGu8Wx5i6lwudPEg"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+      </div>
+  
+        <p class="identificacao">&COPY; 2021  Neowners</p>
+      </footer>
   </body>
 
   <script

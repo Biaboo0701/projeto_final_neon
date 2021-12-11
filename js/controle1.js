@@ -74,6 +74,7 @@ class Produto {
         this.arrayProdutos[i].preco = produto.preco
         this.arrayProdutos[i].data = produto.data
       }
+
     }
   }
 
@@ -117,6 +118,7 @@ class Produto {
     }
     return true
   }
+  
   cancelar() {
     document.getElementById('produto').value = ''
     document.getElementById('preco').value = ''

@@ -25,11 +25,47 @@ nav {
 }
 
 header {
-  padding: 10px;
-  color: #333;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.logo-header img {
+  border-color: black;
+  border-radius: 20%;
+  width: 120px;
+}
+
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu li {
+  margin-right: 1.5rem;
+  list-style: none; 
+}
+
+.nav-menu a:hover {
+  color: rgb(116, 116, 81);
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.menu-icon,
+#check {
+  display: none;
+  position: absolute;
+}
+
+.logout {
+  font-size: 11px;
 }
 
 main {
@@ -60,6 +96,48 @@ button {
 button:hover {
   background-color: #e6b400;
   cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+.rede {
+  display: inline-block;
+  line-height: inherit;
+}
+
+
+.icone{
+  width: 40px;
+  height: 40px;    
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 5px;
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  top: 0;    
+}
+
+.icone i{    
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+  text-decoration: none;
+  color: #000; 
+}
+
+.icone i a{     
+  text-decoration: none;
+  color: #000; 
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  line-height: inherit;
 }
 
 #wave {

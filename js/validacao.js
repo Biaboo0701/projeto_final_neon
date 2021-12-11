@@ -33,7 +33,7 @@ function validateField(field) {
         typeMismatch: 'Por favor use uma senha válida'
       },
       date: {
-        valueMissing: 'preencha com uma uma data, por favor',
+        valueMissing: 'preencha com uma data, por favor',
         typeMismatch: 'Por favor use uma data válida'
       },
       number: {

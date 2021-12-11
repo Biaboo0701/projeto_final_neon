@@ -5,11 +5,10 @@
 }
 
 body {
-  background-image: url(../img/waves_svg/wave-login.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position-y: bottom;
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 
@@ -86,18 +85,52 @@ div a {
   color: black;
 }
 
-.icone {
-  margin: 0px auto;
-  padding: 35px;
-  width: 25px;
-  display: inline-block;
-  margin: 2px;
+.center {
+  text-align: center;
 }
 
-footer {
-  width: 100%;
-  margin: auto;
+.rede {
+  display: inline-block;
+  line-height: inherit;
 }
+
+
+.icone{
+  width: 40px;
+  height: 40px;    
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 5px;
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  top: 0;    
+}
+
+.icone i{    
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+  text-decoration: none;
+  color: #000; 
+}
+
+.icone i a{     
+  text-decoration: none;
+  color: #000; 
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 100%;
+  }
 
 #wave {
   z-index: -1;
