@@ -11,6 +11,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+div {
+  display: inline-block;
 }
 
 nav a {
@@ -58,29 +63,39 @@ main form {
   text-align: center;
 }
 
-.campoInteiro,
-.meioCampo,
-#rua,
-#numero {
-  padding: 1em;
-  margin: 1em;
-  border-radius: 10px;
-}
-
-.campoInteiro {
-  width: 85%;
+.input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 15px;
 }
 
 .meioCampo {
   width: 40%;
+  margin: 0.7rem 0.7rem;
+}
+
+.campoInteiro {
+  width: 85%;
+  margin: 0.5rem 0.3rem;
 }
 
 #rua {
   width: 60%;
+  margin: 0.7rem 0.6rem 0.7rem auto;
 }
 
 #numero {
   width: 20%;
+  margin: 0.7rem auto 0.7rem 0.6rem;
+}
+
+.Error {
+  height: 1rem;
+  margin: 0 auto;
+}
+
+.invisibel {
+  display: none;
 }
 
 #botaoContinuar {
@@ -121,14 +136,7 @@ main form {
 /* MEDIA QUERY - MOBILE */
 
 @media (max-width: 700px) {
-  .campoInteiro,
-  .meioCampo,
-  #rua,
-  #numero,
-  #botaoContinuar {
+  div {
     display: block;
-    width: 100%;
-    margin-left: -1em;
-    margin-right: -1em;
   }
 }
