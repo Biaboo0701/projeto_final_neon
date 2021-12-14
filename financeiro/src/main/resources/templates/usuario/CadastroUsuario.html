@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:financeiro="http://financeiro.neon.com">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>teste</title>
+	</head>
+	
+	<body>
+		<h1>Teste</h1>
+		
+		<form method="POST" th:object="${usuario}" class="form-vertical  js-form-loading" th:action="@{/usuario/cadastro}">
+		</form>
+	</body>
+</html>

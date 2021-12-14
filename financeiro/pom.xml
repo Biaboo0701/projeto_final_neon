@@ -291,13 +291,11 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- Java Mail -->
 		<dependency>
-			<groupId>com.sun.mail</groupId>
-			<artifactId>javax.mail</artifactId>
-			<version>${javax.mail.version}</version>
-			<scope>compile</scope>
-		</dependency>		
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.2</version>
+        </dependency>
 		
 	</dependencies>
 </project>

@@ -34,9 +34,9 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import com.github.mxab.thymeleaf.extras.dataattribute.dialect.DataAttributeDialect;
 import com.neon.financeiro.controller.UsuariosController;
+import com.neon.financeiro.thymeleaf.FinanceiroDialect;
 
 import nz.net.ultraq.thymeleaf.LayoutDialect;
-import thymeleaf.FinanceiroDialect;
 
 @Configuration
 @ComponentScan(basePackageClasses = UsuariosController.class)

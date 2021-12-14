@@ -1,4 +1,4 @@
-package thymeleaf;
+package com.neon.financeiro.thymeleaf;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -7,7 +7,7 @@ import org.thymeleaf.dialect.AbstractProcessorDialect;
 import org.thymeleaf.processor.IProcessor;
 import org.thymeleaf.standard.StandardDialect;
 
-import thymeleaf.processor.ClassForErrorAttributeTagProcessor;
+import com.neon.financeiro.thymeleaf.processor.ClassForErrorAttributeTagProcessor;
 
 public class FinanceiroDialect extends AbstractProcessorDialect {
 	
