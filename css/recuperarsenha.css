@@ -5,43 +5,42 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Notas do Augusto */
-/* Encontrei varios errinhos bestas no seu codigo, como por exemplo o uso que vc fez do seletor global "*"
-   Sei que ele pode parecer uma forma facil de resolver algumas coisas, mas vc deve o usar o minimo possivel colocando apenas o essencial nele.
-   sempre coloque margin e padding igual a 0 no "*" por causa de uma tecnica chamada cross browser, recomendo que pesquise essa tecnica.
-   Também recomendo que utilize class com nomes que tenham a ver com o objeto, ultilizar texto1 , texo2, texto3 não é recomendado e em projetos maiores atrapalham a compressão dos outros programadores ao ler teu código.
-    :)
- */
-
 body {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-nav {
-  width: 100%;
-  margin-bottom: 2rem;
-  padding: 1rem;
+nnav a {
+  font-size: 1.3rem;
 }
 
 .logo {
+  width: 8rem;
   max-width: 10rem;
 }
 
-form {
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  background-color: white;
-  max-width: 500px;
-  width: 70%;
-  padding: 20px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.navbar a {
+  color: #0ca5a5;
 }
 
-form h1 {
+.navbar a:hover {
+  color: #e6b400;
+  cursor: pointer;
+}
+
+main {
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+main h1 {
   text-align: center;
   color: black;
   margin-bottom: 1rem;
@@ -53,10 +52,12 @@ form p {
 }
 
 form input[class='text2'] {
+  background-color: #f2f2f2;
   width: 100%;
   height: 2rem;
-  padding: 1rem;
+  padding: 1.3rem;
   margin-bottom: 1rem;
+  border-radius: 20px;
 }
 
 form input[class='text'] {
@@ -104,55 +105,20 @@ form input[class='voltar']:hover {
   background-color: #d0cbc6;
 }
 
-.center {
-  text-align: center;
-}
-
-.rede {
-  display: inline-block;
-  line-height: inherit;
-}
-
-
-.icone{
-  width: 40px;
-  height: 40px;    
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 5px;
-  position: relative;
-  display: inline-block;
-  flex-direction: row;
-  top: 0;    
-}
-
-.icone i{    
-  position: absolute;
-  top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%);  
-  text-decoration: none;
-  color: #000; 
-}
-
-.icone i a{     
-  text-decoration: none;
-  color: #000; 
-}
-
-footer{
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  line-height: inherit;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 80%;
-  }
-
 #wave {
   z-index: -1;
   position: fixed;
   bottom: 0;
+}
+
+@media (max-width: 700px) {
+  main {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
 }

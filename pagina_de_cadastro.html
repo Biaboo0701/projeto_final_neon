@@ -20,21 +20,42 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg justify-content-end">
-      <a href="#" class="navbar-brand"
-      ><img src="img/logo.png" alt="Logo neowners" class="logo"/></a>
-    <div class="nav-menu">
-
-      <input type="checkbox" id="check">
-      <label for="check" class="check-button">
-          <i class="menu-icon"><img src="img/menu.PNG" alt=""></i>
-
-      </label>
-      <ul>
-          <li><a class="login" onclick="clickedLink()" href="#logar">LOGIN</a></li>
-      </ul>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"
+          ><img src="img/logo.png" class="logo" alt="lobo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><img src="img/menu_icon.png" alt="menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Inicio <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Novo lançamentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
 
     <main>
       <div class="bloco">
@@ -47,7 +68,8 @@
             class="limpa"
             required
             placeholder="Nome"
-          />
+          /> 
+          <span class="error"></span>
           <input
             type="email"
             class="campoInteiro"
@@ -58,24 +80,27 @@
             required
             placeholder="E-mail"
           />
-          <input
-            type="password"
-            class="meioCampo"
-            class="requisito"
-            class="limpa"
-            id="senha1"
-            required
-            placeholder="Senha"
-          />
-          <input
-            type="password"
-            class="meioCampo"
-            class="requisito"
-            class="limpa"
-            id="senha2"
-            required
-            placeholder="Confirmação de Senha"
-          />
+          <span class="error"></span>
+            <input
+              type="password"
+              class="meioCampo"
+              class="requisito"
+              class="limpa"
+              id="senha1"
+              required
+              placeholder="Senha"
+            />
+            <span class="error"></span>
+            <input
+              type="password"
+              class="meioCampo"
+              class="requisito"
+              class="limpa"
+              id="senha2"
+              required
+              placeholder="Confirmação de Senha"
+            />
+            <span class="error"></span>
           <input
             type="text"
             class="meioCampo"
@@ -85,6 +110,7 @@
             required
             placeholder="RG"
           />
+          <span class="error"></span>
           <input
             type="text"
             class="meioCampo"
@@ -95,6 +121,7 @@
             required
             placeholder="CEP"
           />
+          <span class="error"></span>
           <input
             type="text"
             id="rua"
@@ -103,6 +130,7 @@
             required
             placeholder="Rua"
           />
+          <span class="error"></span>
           <input
             type="number"
             id="numero"
@@ -110,12 +138,13 @@
             required
             placeholder="Número"
           />
+          <span class="error"></span>
           <input
             type="text"
             class="meioCampo limpa"
-            required
             placeholder="Complemento"
           />
+          <span class="error"></span>
           <input
             type="text"
             class="meioCampo requisito limpa"
@@ -123,6 +152,7 @@
             required
             placeholder="Cidade"
           />
+          <span class="error"></span>
           <input
             type="text"
             class="requisito limpa meioCampo"
@@ -130,6 +160,7 @@
             required
             placeholder="Bairro"
           />
+          <span class="error"></span>
           <input
             type="text"
             class="requisito limpa meioCampo"
@@ -137,7 +168,7 @@
             id="estado"
             required
             placeholder="Estado"
-          />
+          />          <span class="error"></span>
           <input type="submit" value="Continuar" id="botaoContinuar" />
         </form>
       </div>
@@ -148,111 +179,62 @@
       />
     </main>
 
-    <div
-      class="toast align-items-center text-white bg-primary border-0"
-      style="position: absolute; top: 30%; right: 35%"
-      role="alert"
-      aria-live="assertive"
-      aria-atomic="true"
-      id="toast-confimacao"
-    >
-      <div class="d-flex">
-        <div class="toast-body">Cadastro realizado com sucesso!</div>
-        <button
-          type="button"
-          class="btn-close btn-close-white me-2 m-auto"
-          data-bs-dismiss="toast"
-          aria-label="Close"
-        ></button>
-      </div>
-    </div>
 
-    <div
-      class="toast align-items-center top-center text-white bg-danger border-0"
-      style="position: absolute; top: 100%; right: 35%"
-      role="alert"
-      aria-live="assertive"
-      aria-atomic="false"
-      id="toast-erro"
-    >
-      <div class="d-flex">
-        <div class="toast-body">
-          Houve um erro! Favor verificar os campos preenchidos!
-        </div>
-        <button
-          type="button"
-          class="btn-close btn-close-white me-2 m-auto"
-          data-bs-dismiss="toast"
-          aria-label="Close"
-        ></button>
-      </div>
-    </div>
+    <footer class="text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-0 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-1">
+          <!-- Facebook -->
+          <a
+            class="btn"
 
-    <div
-      class="toast align-items-center top-center text-white bg-danger border-0"
-      style="position: absolute; top: 75%; right: 30%"
-      role="alert"
-      aria-live="assertive"
-      aria-atomic="false"
-      id="toast-erro-cep"
-    >
-      <div class="d-flex">
-        <div class="toast-body">
-          CEP não encontrado! Favor inserir um CEP válido utilizando apenas
-          números!
-        </div>
-        <button
-          type="button"
-          class="btn-close btn-close-white me-2 m-auto"
-          data-bs-dismiss="toast"
-          aria-label="Close"
-        ></button>
-      </div>
-    </div>
+            href="https://pt-br.facebook.com/timeneon/"
+            role="button"
+            ><i><img src="img/redes_sociais/003-facebook.png" alt="perfil da Neon no Facebook"></i
+          ></a>
 
-    <div
-      class="toast align-items-center top-center text-white bg-danger border-0"
-      style="position: absolute; top: 65%; right: 30%"
-      role="alert"
-      aria-live="assertive"
-      aria-atomic="false"
-      id="toast-erro-senha"
-    >
-      <div class="d-flex">
-        <div class="toast-body">Verifique novamente a senha digitada!</div>
-        <button
-          type="button"
-          class="btn-close btn-close-white me-2 m-auto"
-          data-bs-dismiss="toast"
-          aria-label="Close"
-        ></button>
-      </div>
-    </div><br>
+          <!-- Twitter -->
+          <a
+            class="btn"
+            href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"
+            role="button"
+            ><i><img src="img/redes_sociais/001-twitter.png" alt="perfil da Neon no twitter"></i
+          ></a>
 
-    <footer class="contatos">
-      <h2 id="contatos">Dúvidas!?</h2><br>
-       Favor entrar em contato conosco nas seguintes redes sociais:
-      </p><br>
-      <div class="email">✉️futuros@neowners.com</div>
-      <div class="rede">
-          <div class="icone">
-              <a href="https://pt-br.facebook.com/timeneon/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          </div>
-          <div class="icone">
-              <a href="https://www.instagram.com/timeneon/?hl=pt-br"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </div>
-          <div class="icone">
-              <a href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"><i class="fa fa-twitter" aria-hidden="true"></i></a>   
-          </div>
-          <div class="icone">
-              <a href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          </div>
-          <div class="icone">
-              <a href="https://www.youtube.com/channel/UCh0hogVKGu8Wx5i6lwudPEg"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+          <!-- Youtube -->
+          <a
+            class="btn"
+            href="#!"
+            role="button"
+            ><i><img src="img/redes_sociais/004-youtube.png" alt="perfil da Neon no Instagram"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn"
+            href="https://www.instagram.com/timeneon/?hl=pt-br"
+            role="button"
+            ><i><img src="img/redes_sociais/005-instagram.png" alt="perfil da Neon no Instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-floating"
+            href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"
+            role="button"
+            ><i> <img src="img/redes_sociais/002-linkedin.png" alt="perfil da Neon no Linkedin"></i
+          ></a>
+        <!-- Section: Social media -->
       </div>
-  
-        <p class="identificacao">&COPY; 2021  Neowners</p>
-      </footer>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center">
+        futuros@neowners.com || © 2021 Neowners
+      </div>
+      <!-- Copyright -->
+    </footer>
   </body>
 
   <script
@@ -261,5 +243,22 @@
     crossorigin="anonymous"
   ></script>
   <script src="js/validacao.js"></script>
-  <script src="js/pagina_de_cadastro.js"></script>
+  <script src="jquery/jquery.mask.js"></script>
+  <script src="jquery/masks.js"></script>
+  <!--<script src="js/pagina_de_cadastro.js"></script>-->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
 </html>
