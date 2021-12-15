@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="reset.css" />
     <title>Página Cadastro Usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css"
@@ -125,6 +126,7 @@
           <div class="meioCampo">
             <input
               type="text"
+              id="cep"
               class="limpa input requisito"
               pattern="(^[0-9]{5})-?([0-9]{3}$)"
               required
@@ -133,10 +135,11 @@
             <span class="error invisibel input"></span>
           </div>
           <!--RUA-->
-          <div id="rua">
+          <div class="rua">
             <input
               type="text"
               class="requisito input"
+              id="rua"
               class="limpa"
               required
               placeholder="Rua"
@@ -144,10 +147,11 @@
             <span class="error invisibel input" ></span>
           </div>
           <!--Número-->
-          <div id="numero">
+          <div class="numero">
             <input
               type="number"
               class="requisito limpa input"
+              id="numero"
               required
               placeholder="Número"
             />
@@ -166,6 +170,7 @@
           <div class="meioCampo">
             <input
               type="text"
+              id="cidade"
               class=" requisito limpa input"
               required
               placeholder="Cidade"
@@ -176,6 +181,7 @@
           <div class="meioCampo">
             <input
               type="text"
+              id="bairro"
               class="requisito limpa input"
               required
               placeholder="Bairro"
@@ -186,6 +192,7 @@
           <div class="meioCampo">
             <input
               type="text"
+              id="estado"
               class="requisito limpa input"
               required
               placeholder="Estado"
@@ -206,12 +213,12 @@
           <!-- Facebook -->
           <a
             class="btn"
-
+  
             href="https://pt-br.facebook.com/timeneon/"
             role="button"
             ><i><img src="img/redes_sociais/003-facebook.png" alt="perfil da Neon no Facebook"></i
           ></a>
-
+  
           <!-- Twitter -->
           <a
             class="btn"
@@ -219,7 +226,7 @@
             role="button"
             ><i><img src="img/redes_sociais/001-twitter.png" alt="perfil da Neon no twitter"></i
           ></a>
-
+  
           <!-- Youtube -->
           <a
             class="btn"
@@ -227,7 +234,7 @@
             role="button"
             ><i><img src="img/redes_sociais/004-youtube.png" alt="perfil da Neon no Instagram"></i
           ></a>
-
+  
           <!-- Instagram -->
           <a
             class="btn"
@@ -235,7 +242,7 @@
             role="button"
             ><i><img src="img/redes_sociais/005-instagram.png" alt="perfil da Neon no Instagram"></i
           ></a>
-
+  
           <!-- Linkedin -->
           <a
             class="btn btn-floating"
@@ -246,7 +253,7 @@
         <!-- Section: Social media -->
       </div>
       <!-- Grid container -->
-
+  
       <!-- Copyright -->
       <div class="text-center">
         futuros@neowners.com || © 2021 Neowners
