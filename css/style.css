@@ -8,7 +8,7 @@
   --red: #e92929;
   --white-body: #f0f2f5;
 
-  --white-modal: #2f2f2f var(--white-body);
+  --white-modal: #2f2f2f;
   --black-form: white #d0d0d0;
   --modal-h2: var(--dark-blue);
 }
@@ -20,8 +20,8 @@
 }
 
 body {
-  background: var(--white-body);
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 /* Header */
@@ -33,7 +33,6 @@ header {
 }
 
 .nav-link {
-  
 }
 
 nav {
@@ -75,7 +74,7 @@ h2 {
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
   font-weight: normal;
-  color:black;
+  color: black;
 }
 
 /* Links & Buttons */
@@ -111,8 +110,15 @@ button:hover {
 
 .button.new {
   display: inline-block;
-  margin-bottom: 0.8rem;
-  color:black;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #ffc800;
+  color: black;
+  border-radius: 15px;
+}
+
+.button:hover {
+  background-color: #e6b400;
 }
 
 .button.cancel {
@@ -156,11 +162,12 @@ button:hover {
 /* Cards */
 
 .card {
-  background: #adadad;
+  background: #f2f2f2;
   padding: 1.5rem 2rem;
   border-radius: 0.25rem;
   margin-bottom: 2rem;
   color: var(--dark-blue);
+  box-shadow: 0 3px 6px rgba(90, 89, 89, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .card h3 {
@@ -197,32 +204,28 @@ button:hover {
 table thead tr th:first-child,
 table tbody tr td:first-child {
   border-radius: 0.25rem 0 0 0.25rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 table thead tr th:last-child,
 table tbody tr td:last-child {
   border-radius: 0 0.25rem 0.25rem 0;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 table thead th {
-  background: rgb(119, 118, 118);
+  background: #f2f2f2;
+  outline: 1px solid rgba(0, 0, 0, 0.15);
   text-align: left;
   padding: 1rem 2rem;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 table tbody tr {
-  opacity: 0.7;
-}
-
-table tbody tr:hover {
-  opacity: 1;
+  background-color: #f2f2f2;
 }
 
 table tbody td {
-  background: white;;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  background: #f3f3f3;
   padding: 1rem 2rem;
   color: black;
   position: relative;
@@ -241,7 +244,7 @@ td.expense {
 }
 
 td.edit:hover {
-  background-color: #adadad;;
+  background-color: #adadad;
 }
 
 .help {
@@ -275,7 +278,9 @@ td.edit:hover {
 }
 
 .modal {
-  background: var(--white-modal);
+  background-color: #e6e6e6;
+  box-shadow: 0 3px 6px rgba(90, 89, 89, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
   padding: 2.4rem;
   position: relative;
   width: 90%;
@@ -292,7 +297,7 @@ td.edit:hover {
 
 .form h2 {
   margin-top: 0;
-  color: white;
+  color: black;
 }
 
 .form form input {
@@ -310,7 +315,8 @@ td.edit:hover {
 }
 
 .input-group small {
-  opacity: 0.4;
+  opacity: 0.7;
+  color: black;
 }
 
 .input-group.actions {
@@ -336,14 +342,13 @@ td.edit:hover {
   line-height: inherit;
 }
 
-
-.icone{
+.icone {
   border-radius: 50%;
   margin: 5px;
   position: relative;
   display: inline-block;
   flex-direction: row;
-  top: 0;    
+  top: 0;
 }
 
 footer {
