@@ -12,7 +12,7 @@ body {
   justify-content: center;
 }
 
-nnav a {
+nav a {
   font-size: 1.3rem;
 }
 
@@ -103,6 +103,11 @@ form input[class='submit']:hover {
 
 form input[class='voltar']:hover {
   background-color: #d0cbc6;
+}
+
+footer {
+  margin-top: 1rem;
+  bottom: 0;
 }
 
 #wave {

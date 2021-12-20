@@ -11,6 +11,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+div {
+  display: inline-block;
 }
 
 nav a {
@@ -44,6 +49,9 @@ nav a {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+main {
+  margin: 1rem auto;
+}
 main h2 {
   text-align: center;
   color: white;
@@ -58,29 +66,39 @@ main form {
   text-align: center;
 }
 
-.campoInteiro,
-.meioCampo,
-#rua,
-#numero {
-  padding: 1em;
-  margin: 1em;
-  border-radius: 10px;
-}
-
-.campoInteiro {
-  width: 85%;
+.input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 15px;
 }
 
 .meioCampo {
   width: 40%;
+  margin: 0.7rem 0.7rem;
 }
 
-#rua {
+.campoInteiro {
+  width: 85%;
+  margin: 0.5rem 0.3rem;
+}
+
+.rua {
   width: 60%;
+  margin: 0.7rem 0.6rem 0.7rem auto;
 }
 
-#numero {
+.numero {
   width: 20%;
+  margin: 0.7rem auto 0.7rem 0.6rem;
+}
+
+.Error {
+  height: 1rem;
+  margin: 0 auto;
+}
+
+.invisibel {
+  display: none;
 }
 
 #botaoContinuar {
@@ -104,6 +122,11 @@ main form {
   width: 100%;
 }
 
+footer {
+  margin-top: 1rem;
+  bottom: 0;
+}
+
 .input span.error {
   display: flex;
 
@@ -121,14 +144,33 @@ main form {
 /* MEDIA QUERY - MOBILE */
 
 @media (max-width: 700px) {
-  .campoInteiro,
-  .meioCampo,
-  #rua,
-  #numero,
-  #botaoContinuar {
+  div {
     display: block;
+  }
+
+  .input {
     width: 100%;
-    margin-left: -1em;
-    margin-right: -1em;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .meioCampo {
+    width: 100%;
+    margin: 0.7rem auto;
+  }
+
+  .campoInteiro {
+    width: 100%;
+    margin: 0.5rem auto;
+  }
+
+  .rua {
+    width: 100%;
+    margin: 0.7rem auto 0.7rem auto;
+  }
+
+  .numero {
+    width: 100%;
+    margin: 0.7rem auto 0.7rem auto;
   }
 }

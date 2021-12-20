@@ -111,6 +111,11 @@ main {
   color: #000;
 }
 
+footer {
+  margin-top: 1rem;
+  bottom: 0;
+}
+
 #wave {
   z-index: -1;
   position: fixed;

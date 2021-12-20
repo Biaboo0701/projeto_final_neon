@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-y: bottom;
+  height: 80vh;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.logo {
+  max-width: 10rem;
+}
+
+h1 {
+  font-size: 1rem;
+  color: #333;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  background-color: #fff;
+  padding: 1rem;
+  width: 40%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(90, 89, 89, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form input[type='email'],
+form input[type='password'] {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+form input[type='submit'] {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  background-color: #ffc800;
+  color: black;
+  border: 0;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+form input[type='submit']:hover {
+  background-color: #e6b400;
+}
+
+.cadastre-se,
+.esqueci-senha {
+  cursor: pointer;
+  display: inline-block;
+  margin: 8px;
+}
+
+div a {
+  font-weight: bold;
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.rede {
+  display: inline-block;
+  line-height: inherit;
+}
+
+
+.icone{
+  width: 40px;
+  height: 40px;    
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 5px;
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  top: 0;    
+}
+
+.icone i{    
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+  text-decoration: none;
+  color: #000; 
+}
+
+.icone i a{     
+  text-decoration: none;
+  color: #000; 
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 100%;
+  }
+
+#wave {
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-width:768px){
+  body {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-y: bottom;
+    height: 80vh;
+    position: relative;
+  }
+  
+  nav {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+  
+  .logo {
+    border-color: black;
+    border-radius: 20%;
+    width: 180px;
+    max-width: 10rem;
+  }
+  
+  h1 {
+    color: #333;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 1rem;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(90, 89, 89, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+  }
+  
+  form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  form input[type='email'],
+  form input[type='password'] {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+  }
+  
+  form input[type='submit'] {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    background-color: #ffc800;
+    color: black;
+    border: 0;
+    border-radius: 20px;
+    transition: 1s;
+  }
+  
+  form input[type='submit']:hover {
+    background-color: #e6b400;
+  }
+  
+  .cadastre-se,
+  .esqueci-senha {
+    cursor: pointer;
+    display: inline-block;
+    margin: 8px;
+  }
+  
+  div a {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .rede {
+    display: inline-block;
+    line-height: inherit;
+  }
+  
+  .text-center {
+    color: black;
+    }
+    
+  .icone{
+    width: 25px;
+    height: 25px;    
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 3px;
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    top: 0;    
+  }
+  }

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:financeiro="http://financeiro.neon.com">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Cadastro</title>
+		
+		<link rel="stylesheet" type="text/css" th:href="@{/stylesheets/pagina_de_cadastro.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/stylesheets/fonte-awesome.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/stylesheets/bootstrap.min.css}"/>
+	</head>
+	
+	<div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+        	<img th:src="@{/img/logo.png}" class="logo" alt="logo"/>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><img th:src="@{/img/menu_icon.png}" alt="menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio <span class="sr-only"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Novo lançamentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <div class="bloco">
+        <h1>Criar Conta</h1>
+        <form>
+          <!--Nome-->
+          <div class="campoInteiro">
+            <input type="text" class="requisito input limpa" required placeholder="Nome" />
+              <span class="error invisibel input"></span>
+          </div>
+          <!--Email-->
+          <div class="campoInteiro">
+            <input type="email" class="requisito input limpa" id="email"
+              pattern='/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+              required
+              placeholder="E-mail"
+            />
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Senha-->
+            <div class="meioCampo">
+              <input type="password" class="requisito input limpa" id="senha1" required placeholder="Senha"/>
+              <span class="error invisibel input"></span>
+            </div>
+            <!--Confirme a senha-->
+            <div class="meioCampo">
+              <input type="password" class="requisito input limpa" id="senha2" required placeholder="Confirmação de Senha"/>
+              <span class="error invisibel input"></span>
+            </div>
+            <!--RG-->
+          <div class="meioCampo">
+            <input type="text" class="requisito input limpa" pattern="(^\d{1,2}).?(\d{3}).?(\d{3})-?(\d{1}|X|x$)"
+              required placeholder="RG"/>
+            <span class="error invisibel input"></span>
+          </div>
+          <!--CEP-->
+          <div class="meioCampo">
+            <input type="text" class="limpa input requisito" pattern="(^[0-9]{5})-?([0-9]{3}$)"
+              required placeholder="CEP" id="cep"/>
+            <span class="error invisibel input"></span>
+          </div>
+          <!--RUA-->
+          <div id="rua">
+            <input type="text" class="requisito input limpa" required placeholder="Rua" id="rua"/>
+            <span class="error invisibel input" ></span>
+          </div>
+          <!--Número-->
+          <div id="numero">
+            <input type="number" class="requisito limpa input" required placeholder="Número"/>
+            <span class="error invisibel input" ></span>
+          </div>
+          <!--Complemento-->
+          <div class="meioCampo">
+            <input type="text" class=" limpa input" placeholder="Complemento" />
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Cidade-->
+          <div class="meioCampo">
+            <input type="text" class=" requisito limpa input" required placeholder="Cidade" id="cidade"/>
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Bairro-->
+          <div class="meioCampo">
+            <input type="text" class="requisito limpa input" required placeholder="Bairro" id="bairro"/>
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Estado-->
+          <div class="meioCampo">
+            <input type="text" class="requisito limpa input" required placeholder="Estado" id="estado"/>
+            <span class="error invisibel input"></span>
+          </div>
+          <input type="submit" value="Continuar" id="botaoContinuar" />
+        </form>
+      </div>
+    </main>
+
+
+    <footer class="text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-0 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-1">
+          <!-- Facebook -->
+          <a class="btn" href="https://pt-br.facebook.com/timeneon/" role="button"
+            ><i><img th:src="@{/img/redes_sociais/003-facebook.png}" alt="perfil da Neon no Facebook"></i
+          ></a>
+          <!-- Twitter -->
+          <a class="btn"
+            href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"
+            role="button"
+            ><i><img th:src="@{/img/redes_sociais/001-twitter.png}" alt="perfil da Neon no twitter"></i
+          ></a>
+
+          <!-- Youtube -->
+          <a class="btn" href="#!" role="button">
+          	<i><img th:src="@{/img/redes_sociais/004-youtube.png}" alt="perfil da Neon no Instagram"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a class="btn" href="https://www.instagram.com/timeneon/?hl=pt-br" role="button">
+          	<i><img th:src="@{/img/redes_sociais/005-instagram.png}" alt="perfil da Neon no Instagram"></i>
+          </a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-floating"
+            href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"
+            role="button"><i> <img th:src="@{/img/redes_sociais/002-linkedin.png}" alt="perfil da Neon no Linkedin"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center">futuros@neowners.com || © 2021 Neowners</div>
+      <!-- Copyright -->
+    </footer>
+    <img th:src="@{/img/waves_svg/wave-cadastro.svg}" id="wave" alt="wave cadastro"
+  />
+  </body>
+  
+  <script th:src="@{/javascripts/pagina_de_cadastro.js}"></script>
+  <script th:src="@{/javascripts/jquery.mask.js}"></script>
+  <script th:src="@{/javascripts/masks.js}"></script>
+  <script th:src="@{/javascripts/validacao.js}"></script>
+  <script th:src="@{/javascripts/bootstrap.min.js}"></script>
+  <!-- 
+<script th:src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script> -->
+
+
+</html>

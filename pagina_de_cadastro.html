@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="reset.css" />
     <title>Página Cadastro Usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css"
@@ -61,122 +62,146 @@
       <div class="bloco">
         <h1>Criar Conta</h1>
         <form>
-          <input
-            type="text"
-            class="campoInteiro"
-            class="requisito"
-            class="limpa"
-            required
-            placeholder="Nome"
-          /> 
-          <span class="error"></span>
-          <input
-            type="email"
-            class="campoInteiro"
-            class="requisito"
-            class="limpa"
-            id="email"
-            pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-            required
-            placeholder="E-mail"
-          />
-          <span class="error"></span>
+          <!--Nome-->
+          <div class="campoInteiro">
             <input
-              type="password"
-              class="meioCampo"
-              class="requisito"
+              type="text"
+              class="requisito input"
               class="limpa"
-              id="senha1"
               required
-              placeholder="Senha"
-            />
-            <span class="error"></span>
+              placeholder="Nome"
+              />
+              <span class="error invisibel input"></span>
+          </div>
+          <!--Email-->
+          <div class="campoInteiro">
             <input
-              type="password"
-              class="meioCampo"
-              class="requisito"
+              type="email"
+              class="requisito input"
               class="limpa"
-              id="senha2"
+              id="email"
+              pattern='/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
               required
-              placeholder="Confirmação de Senha"
+              placeholder="E-mail"
             />
-            <span class="error"></span>
-          <input
-            type="text"
-            class="meioCampo"
-            class="requisito"
-            class="limpa"
-            pattern="(^\d{1,2}).?(\d{3}).?(\d{3})-?(\d{1}|X|x$)"
-            required
-            placeholder="RG"
-          />
-          <span class="error"></span>
-          <input
-            type="text"
-            class="meioCampo"
-            class="requisito"
-            class="limpa"
-            id="cep"
-            pattern="(^[0-9]{5})-?([0-9]{3}$)"
-            required
-            placeholder="CEP"
-          />
-          <span class="error"></span>
-          <input
-            type="text"
-            id="rua"
-            class="requisito"
-            class="limpa"
-            required
-            placeholder="Rua"
-          />
-          <span class="error"></span>
-          <input
-            type="number"
-            id="numero"
-            class="requisito limpa"
-            required
-            placeholder="Número"
-          />
-          <span class="error"></span>
-          <input
-            type="text"
-            class="meioCampo limpa"
-            placeholder="Complemento"
-          />
-          <span class="error"></span>
-          <input
-            type="text"
-            class="meioCampo requisito limpa"
-            id="cidade"
-            required
-            placeholder="Cidade"
-          />
-          <span class="error"></span>
-          <input
-            type="text"
-            class="requisito limpa meioCampo"
-            id="bairro"
-            required
-            placeholder="Bairro"
-          />
-          <span class="error"></span>
-          <input
-            type="text"
-            class="requisito limpa meioCampo"
-            class=""
-            id="estado"
-            required
-            placeholder="Estado"
-          />          <span class="error"></span>
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Senha-->
+            <div class="meioCampo">
+              <input
+                type="password"
+                class="requisito input"
+                class="limpa"
+                id="senha1"
+                required
+                placeholder="Senha"
+              />
+              <span class="error invisibel input"></span>
+            </div>
+            <!--Confirme a senha-->
+            <div class="meioCampo">
+              <input
+                type="password"
+                class="requisito input"
+                class="limpa"
+                id="senha2"
+                required
+                placeholder="Confirmação de Senha"
+              />
+              <span class="error invisibel input"></span>
+            </div>
+            <!--RG-->
+          <div class="meioCampo">
+            <input
+              type="text"
+              class="requisito input"
+              class="limpa"
+              pattern="(^\d{1,2}).?(\d{3}).?(\d{3})-?(\d{1}|X|x$)"
+              required
+              placeholder="RG"
+            />
+            <span class="error invisibel input"></span>
+          </div>
+          <!--CEP-->
+          <div class="meioCampo">
+            <input
+              type="text"
+              id="cep"
+              class="limpa input requisito"
+              pattern="(^[0-9]{5})-?([0-9]{3}$)"
+              required
+              placeholder="CEP"
+            />
+            <span class="error invisibel input"></span>
+          </div>
+          <!--RUA-->
+          <div class="rua">
+            <input
+              type="text"
+              class="requisito input"
+              id="rua"
+              class="limpa"
+              required
+              placeholder="Rua"
+            />
+            <span class="error invisibel input" ></span>
+          </div>
+          <!--Número-->
+          <div class="numero">
+            <input
+              type="number"
+              class="requisito limpa input"
+              id="numero"
+              required
+              placeholder="Número"
+            />
+            <span class="error invisibel input" ></span>
+          </div>
+          <!--Complemento-->
+          <div class="meioCampo">
+            <input
+              type="text"
+              class=" limpa input"
+              placeholder="Complemento"
+            />
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Cidade-->
+          <div class="meioCampo">
+            <input
+              type="text"
+              id="cidade"
+              class=" requisito limpa input"
+              required
+              placeholder="Cidade"
+            />
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Bairro-->
+          <div class="meioCampo">
+            <input
+              type="text"
+              id="bairro"
+              class="requisito limpa input"
+              required
+              placeholder="Bairro"
+            />
+            <span class="error invisibel input"></span>
+          </div>
+          <!--Estado-->
+          <div class="meioCampo">
+            <input
+              type="text"
+              id="estado"
+              class="requisito limpa input"
+              required
+              placeholder="Estado"
+            />
+            <span class="error invisibel input"></span>
+          </div>
           <input type="submit" value="Continuar" id="botaoContinuar" />
         </form>
       </div>
-      <img
-        src="img/waves_svg/wave-cadastro.svg"
-        id="wave"
-        alt="wave cadastro"
-      />
     </main>
 
 
@@ -239,8 +264,14 @@
       </div>
       <!-- Copyright -->
     </footer>
+    <img
+    src="img/waves_svg/wave-cadastro.svg"
+    id="wave"
+    alt="wave cadastro"
+  />
   </body>
 
+  <script src="js/pagina_de_cadastro.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
@@ -256,7 +287,7 @@
   crossorigin="anonymous"
 ></script>
 <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  src="node_modules/@popperjs/core/dist/umd/popper.min.js"
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
   crossorigin="anonymous"
 ></script>

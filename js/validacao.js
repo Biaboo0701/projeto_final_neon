@@ -46,10 +46,12 @@ function validateField(field) {
   function setCustomMessage(message) {
     const spanError = field.parentNode.querySelector('span.error')
     if (message) {
+      spanError.classList.remove('invisibel')
       spanError.classList.add('active')
       spanError.innerHTML = message
     } else {
       spanError.classList.remove('active')
+      spanError.classList.add('invisibel')
       spanError.innerHTML = ''
     }
   }
