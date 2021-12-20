@@ -1,215 +1,218 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/filter.css" />
-    <link rel="stylesheet" href="./css/toastify.css" />
-    <link rel="stylesheet" href="./css/button-dark.css" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-
-    <title>neowners$</title>
-  </head>
-
-  <body>
-    <header>
-      <div>
-        <a href="#" class="navbar-brand"
-        ><img src="img/logo.png" alt="Logo neowners" class="logo"/></a>
+ <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/filter.css" />
+      <link rel="stylesheet" href="./css/toastify.css" />
+      <link rel="stylesheet" href="./css/button-dark.css" />
+  
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+        rel="stylesheet"
+      />
+  
+      <!-- Icons -->
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous"
+      />
+  
+      <title>neowners$</title>
+    </head>
+  
+    <body>
+      <header>
+        <div>
+          <a href="#" class="navbar-brand"
+          ><img src="img/logo.png" alt="Logo neowners" class="logo"/></a>
+        </div>
+    </header>
+  
+      <main class="container">
+        <section id="balance">
+          <h2 class="sr-only">Balanço</h2>
+  
+          <div class="card">
+            <h3>
+              <span>Entradas</span>
+              <img src="./assets/income.svg" alt="Image de entrada" />
+            </h3>
+  
+            <p id="incomeDisplay">R$ 0,00</p>
+          </div>
+  
+          <div class="card">
+            <h3>
+              <span>Saídas</span>
+              <img src="./assets/expense.svg" alt="Image de saida" />
+            </h3>
+            <p id="expenseDisplay">R$ 0,00</p>
+          </div>
+  
+          <div class="card total">
+            <h3>
+              <span>Total</span>
+              <img src="./assets/total.svg" alt="Image do total" />
+            </h3>
+            <p id="totalDisplay">R$ 0,00</p>
+          </div>
+        </section>
+  
+        <section id="transactions">
+          <h2 class="sr-only">Transações</h2>
+  
+          <div id="row">
+            <a onclick="Modal.toogle" class="button new" href="#"
+              >+ Nova transação</a
+            >
+  
+            <div id="dark_mode-button">
+            </div>
+          </div>
+  
+          <table id="data-table">
+            <thead>
+              <tr>
+                <th>descrição</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th id="content-icons-filter"></th>
+              </tr>
+            </thead>
+  
+            <tfoot>
+              <tr>
+                <td>
+                  Click na descrição do item para editar.
+                </td>
+              </tr>
+            </tfoot>
+  
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
+  
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="form">
+            <h2>Nova transação</h2>
+  
+            <form action="#" onsubmit="Form.submit(event)">
+              <div class="input-group">
+                <label for="description" class="sr-only">Descrição</label>
+                <input
+                  type="text"
+                  name="description"
+                  id="description"
+                  placeholder="Descrição"
+                />
+              </div>
+  
+              <div class="input-group">
+                <label for="amount" class="sr-only">Valor</label>
+                <input
+                  type="number"
+                  name="amount"
+                  id="amount"
+                  placeholder="0,00"
+                  step="0.01"
+                />
+                <small class="help"
+                  >Use o sinal de - (negativos) para despesas e , virgula para
+                  casas decimais</small
+                >
+              </div>
+  
+              <div class="input-group">
+                <label for="date" class="sr-only">Data</label>
+                <input type="date" id="date" name="date" />
+              </div>
+  
+              <div class="input-group actions">
+                <a onclick="Modal.toogle" href="#" class="button cancel"
+                  >Cancelar</a
+                >
+                <button type="submit">Salvar</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-  </header>
-
-    <main class="container">
-      <section id="balance">
-        <h2 class="sr-only">Balanço</h2>
-
-        <div class="card">
-          <h3>
-            <span>Entradas</span>
-            <img src="./assets/income.svg" alt="Image de entrada" />
-          </h3>
-
-          <p id="incomeDisplay">R$ 0,00</p>
-        </div>
-
-        <div class="card">
-          <h3>
-            <span>Saídas</span>
-            <img src="./assets/expense.svg" alt="Image de saida" />
-          </h3>
-          <p id="expenseDisplay">R$ 0,00</p>
-        </div>
-
-        <div class="card total">
-          <h3>
-            <span>Total</span>
-            <img src="./assets/total.svg" alt="Image do total" />
-          </h3>
-          <p id="totalDisplay">R$ 0,00</p>
-        </div>
-      </section>
-
-      <section id="transactions">
-        <h2 class="sr-only">Transações</h2>
-
-        <div id="row">
-          <a onclick="Modal.toogle" class="button new" href="#"
-            >+ Nova transação</a
-          >
-        </div>
-
-        <table id="data-table">
-          <thead>
-            <tr>
-              <th>descrição</th>
-              <th>Valor</th>
-              <th>Data</th>
-              <th clid="content-icons-filter"></th>
-            </tr>
-          </thead>
-
-          <tfoot>
-            <tr>
-              <td rowspan="3" colspan="3">
-                Click na descrição do item para editar.
-              </td>
-            </tr>
-          </tfoot>
-
-          <tbody></tbody>
-        </table>
-      </section>
-    </main>
-
-    <div class="modal-overlay">
-      <div class="modal">
-        <div class="form">
-          <h2>Nova transação</h2>
-
-          <form action="#" onsubmit="Form.submit(event)">
-            <div class="input-group">
-              <label for="description" class="sr-only">Descrição</label>
-              <input
-                type="text"
-                name="description"
-                id="description"
-                placeholder="Descrição"
-              />
-            </div>
-
-            <div class="input-group">
-              <label for="amount" class="sr-only">Valor</label>
-              <input
-                type="number"
-                name="amount"
-                id="amount"
-                placeholder="0,00"
-                step="0.01"
-              />
-              <small class="help"
-                >Use o sinal de - (negativos) para despesas e , virgula para
-                casas decimais</small
-              >
-            </div>
-
-            <div class="input-group">
-              <label for="date" class="sr-only">Data</label>
-              <input type="date" id="date" name="date" />
-            </div>
-
-            <div class="input-group actions">
-              <a onclick="Modal.toogle" href="#" class="button cancel"
-                >Cancelar</a
-              >
-              <button type="submit">Salvar</button>
-            </div>
-          </form>
+  
+      <div class="filter-overlay">
+        <div class="modal">
+          <div class="form">
+            <h2>Filtrar</h2>
+  
+            <form action="#" onsubmit="Form.submit(event)">
+              <div class="input-group">
+                <label for="initial-date">De:</label>
+                <input type="date" id="initial-date" name="initial-date" />
+              </div>
+  
+              <div class="input-group">
+                <label for="final-date">Ate:</label>
+                <input type="date" id="final-date" name="final-date" />
+              </div>
+  
+              <div class="input-group actions">
+                <a onclick="Filter.toogle()" href="#" class="button cancel"
+                  >Cancelar</a
+                >
+                <button type="button" onclick="filtred()">Salvar</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+  
+      <div class="toastify">
+        <div class="toastify-container-msg">
+          <p id="toastify-msg"></p>
+        </div>
+      </div>
+  
+      <div class="container">
+        <footer class="contatos">
+          <h2 id="contatos">Dúvidas!?</h2><br>
+           Favor entrar em contato conosco nas seguintes redes sociais:
+          </p><br>
+          <div class="email">✉️futuros@neowners.com</div>
+          <div class="rede">
+              <div class="icone">
+                  <a href="https://pt-br.facebook.com/timeneon/" target="_blank"><img src="img/redes_sociais/003-facebook.png"></a>
+              </div>
+              <div class="icone">
+                  <a href="https://www.instagram.com/timeneon/?hl=pt-br" target="_blank"><img src="img/redes_sociais/005-instagram.png"></a>
+              </div>
+              <div class="icone">
+                  <a href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB" target="_blank"><img src="img/redes_sociais/001-twitter.png"></a>   
+              </div>
+              <div class="icone">
+                  <a href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB" target="_blank"><img src="img/redes_sociais/002-linkedin.png"></a>
+              </div>
+              <div class="icone">
+                  <a href="https://www.youtube.com/channel/UCh0hogVKGu8Wx5i6lwudPEg" target="_blank"><img src="img/redes_sociais/004-youtube.png"></a>
+          </div>
+      
+               <p class="identificacao">&COPY; 2021  Neowners</p>
+          </footer>
     </div>
-
-    <div class="filter-overlay">
-      <div class="modal">
-        <div class="form">
-          <h2>Filtrar</h2>
-
-          <form action="#" onsubmit="Form.submit(event)">
-            <div class="input-group">
-              <label for="initial-date">De:</label>
-              <input type="date" id="initial-date" name="initial-date" />
-            </div>
-
-            <div class="input-group">
-              <label for="final-date">Ate:</label>
-              <input type="date" id="final-date" name="final-date" />
-            </div>
-
-            <div class="input-group actions">
-              <a onclick="Filter.toogle()" href="#" class="button cancel"
-                >Cancelar</a
-              >
-              <button type="button" onclick="filtred()">Salvar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="toastify">
-      <div class="toastify-container-msg">
-        <p id="toastify-msg"></p>
-      </div>
-    </div>
-
-    <div class="container">
-      <footer class="contatos">
-        <h2 id="contatos">Dúvidas!?</h2><br>
-         Favor entrar em contato conosco nas seguintes redes sociais:
-        </p><br>
-        <div class="email">✉️futuros@neowners.com</div>
-        <div class="rede">
-            <div class="icone">
-                <a href="https://pt-br.facebook.com/timeneon/" target="_blank"><img src="img/redes_sociais/003-facebook.png"></a>
-            </div>
-            <div class="icone">
-                <a href="https://www.instagram.com/timeneon/?hl=pt-br" target="_blank"><img src="img/redes_sociais/005-instagram.png"></a>
-            </div>
-            <div class="icone">
-                <a href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB" target="_blank"><img src="img/redes_sociais/001-twitter.png"></a>   
-            </div>
-            <div class="icone">
-                <a href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB" target="_blank"><img src="img/redes_sociais/002-linkedin.png"></a>
-            </div>
-            <div class="icone">
-                <a href="https://www.youtube.com/channel/UCh0hogVKGu8Wx5i6lwudPEg" target="_blank"><img src="img/redes_sociais/004-youtube.png"></a>
-        </div>
-    
-             <p class="identificacao">&COPY; 2021  Neowners</p>
-        </footer>
-  </div>
-
-    <script src="./js/darkMode.js"></script>
-    <script src="./js/colorRedOfTotal.js"></script>
-    <script src="./js/filter.js"></script>
-    <script src="./js/index.js"></script>
-
-    <script src="./js/toastify.js"></script>
-  </body>
-  <img src="img/waves_svg/wave-recupere-senha.svg" alt="#" id="wave" />
-</html>
+  
+      <script src="./js/darkMode.js"></script>
+      <script src="./js/colorRedOfTotal.js"></script>
+      <script src="./js/filter.js"></script>
+      <script src="./js/index.js"></script>
+  
+      <script src="./js/toastify.js"></script>
+    </body>
+    <img src="img/waves_svg/wave-recupere-senha.svg" alt="#" id="wave" />
+  </html>
