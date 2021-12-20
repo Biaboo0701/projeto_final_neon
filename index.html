@@ -1,127 +1,215 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/font-awesome.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/filter.css" />
+    <link rel="stylesheet" href="./css/toastify.css" />
+    <link rel="stylesheet" href="./css/button-dark.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+
+    <title>neowners$</title>
+  </head>
+
   <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a href="#" class="navbar-brand"
-        ><img src="img/logo.png" alt="Logo neowners" class="logo"
-      /></a>
-    </div>
-    </nav>
-
-    <h1>GERENCIE O SEU DINDIN AQUI💰</h1>
-    
-<div class="main">
-    <form>
-      <h2>Efetuar Login</h2>
-
-      <div class="input">
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="Seu e-mail..."
-          required
-        />
-        <span class="error"></span>
-      </div>
-
-      <div class="input">
-        <input
-          id="password"
-          type="password"
-          name="senha"
-          required
-          placeholder="Sua senha..."
-        />
-        <span class="error"></span>
-      </div>
-
-      <input type="submit" name="acao" value="Enviar..." />
-
+    <header>
       <div>
-        <div class="cadastre-se">
-          <a href=""><i>Cadastre-se!</i></a>
+        <a href="#" class="navbar-brand"
+        ><img src="img/logo.png" alt="Logo neowners" class="logo"/></a>
       </div>
-        <div class="esqueci-senha">
-            <a href=""><i>Esqueci a minha senha!</i></a>
+  </header>
+
+    <main class="container">
+      <section id="balance">
+        <h2 class="sr-only">Balanço</h2>
+
+        <div class="card">
+          <h3>
+            <span>Entradas</span>
+            <img src="./assets/income.svg" alt="Image de entrada" />
+          </h3>
+
+          <p id="incomeDisplay">R$ 0,00</p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Saídas</span>
+            <img src="./assets/expense.svg" alt="Image de saida" />
+          </h3>
+          <p id="expenseDisplay">R$ 0,00</p>
+        </div>
+
+        <div class="card total">
+          <h3>
+            <span>Total</span>
+            <img src="./assets/total.svg" alt="Image do total" />
+          </h3>
+          <p id="totalDisplay">R$ 0,00</p>
+        </div>
+      </section>
+
+      <section id="transactions">
+        <h2 class="sr-only">Transações</h2>
+
+        <div id="row">
+          <a onclick="Modal.toogle" class="button new" href="#"
+            >+ Nova transação</a
+          >
+        </div>
+
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>descrição</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th clid="content-icons-filter"></th>
+            </tr>
+          </thead>
+
+          <tfoot>
+            <tr>
+              <td rowspan="3" colspan="3">
+                Click na descrição do item para editar.
+              </td>
+            </tr>
+          </tfoot>
+
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div class="form">
+          <h2>Nova transação</h2>
+
+          <form action="#" onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label for="description" class="sr-only">Descrição</label>
+              <input
+                type="text"
+                name="description"
+                id="description"
+                placeholder="Descrição"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="amount" class="sr-only">Valor</label>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                placeholder="0,00"
+                step="0.01"
+              />
+              <small class="help"
+                >Use o sinal de - (negativos) para despesas e , virgula para
+                casas decimais</small
+              >
+            </div>
+
+            <div class="input-group">
+              <label for="date" class="sr-only">Data</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="input-group actions">
+              <a onclick="Modal.toogle" href="#" class="button cancel"
+                >Cancelar</a
+              >
+              <button type="submit">Salvar</button>
+            </div>
+          </form>
         </div>
       </div>
-    </form>
+    </div>
+
+    <div class="filter-overlay">
+      <div class="modal">
+        <div class="form">
+          <h2>Filtrar</h2>
+
+          <form action="#" onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label for="initial-date">De:</label>
+              <input type="date" id="initial-date" name="initial-date" />
+            </div>
+
+            <div class="input-group">
+              <label for="final-date">Ate:</label>
+              <input type="date" id="final-date" name="final-date" />
+            </div>
+
+            <div class="input-group actions">
+              <a onclick="Filter.toogle()" href="#" class="button cancel"
+                >Cancelar</a
+              >
+              <button type="button" onclick="filtred()">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="toastify">
+      <div class="toastify-container-msg">
+        <p id="toastify-msg"></p>
+      </div>
+    </div>
 
     <div class="container">
-      <footer class="text-center text-white">
-        <!-- Grid container -->
-        <div class="container p-0 pb-0">
-          <!-- Section: Social media -->
-          <section class="mb-1">
-            <!-- Facebook -->
-            <a
-              class="btn"
-    
-              href="https://pt-br.facebook.com/timeneon/"
-              role="button"
-              ><i><img src="img/redes_sociais/003-facebook.png" alt="perfil da Neon no Facebook"></i
-            ></a>
-    
-            <!-- Twitter -->
-            <a
-              class="btn"
-              href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"
-              role="button"
-              ><i><img src="img/redes_sociais/001-twitter.png" alt="perfil da Neon no twitter"></i
-            ></a>
-    
-            <!-- Youtube -->
-            <a
-              class="btn"
-              href="#!"
-              role="button"
-              ><i><img src="img/redes_sociais/004-youtube.png" alt="perfil da Neon no Instagram"></i
-            ></a>
-    
-            <!-- Instagram -->
-            <a
-              class="btn"
-              href="https://www.instagram.com/timeneon/?hl=pt-br"
-              role="button"
-              ><i><img src="img/redes_sociais/005-instagram.png" alt="perfil da Neon no Instagram"></i
-            ></a>
-    
-            <!-- Linkedin -->
-            <a
-              class="btn btn-floating"
-              href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB"
-              role="button"
-              ><i> <img src="img/redes_sociais/002-linkedin.png" alt="perfil da Neon no Linkedin"></i
-            ></a>
-          <!-- Section: Social media -->
+      <footer class="contatos">
+        <h2 id="contatos">Dúvidas!?</h2><br>
+         Favor entrar em contato conosco nas seguintes redes sociais:
+        </p><br>
+        <div class="email">✉️futuros@neowners.com</div>
+        <div class="rede">
+            <div class="icone">
+                <a href="https://pt-br.facebook.com/timeneon/" target="_blank"><img src="img/redes_sociais/003-facebook.png"></a>
+            </div>
+            <div class="icone">
+                <a href="https://www.instagram.com/timeneon/?hl=pt-br" target="_blank"><img src="img/redes_sociais/005-instagram.png"></a>
+            </div>
+            <div class="icone">
+                <a href="https://twitter.com/timeneon?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB" target="_blank"><img src="img/redes_sociais/001-twitter.png"></a>   
+            </div>
+            <div class="icone">
+                <a href="https://www.linkedin.com/company/timeneon/?utm_term=neon&gclid=Cj0KCQiAtJeNBhCVARIsANJUJ2G5T65tJuO17Kekxu45pFvlmYT2UlsE04OdjXTcXd5NJNlDKOLp1kgaAugAEALw_wcB" target="_blank"><img src="img/redes_sociais/002-linkedin.png"></a>
+            </div>
+            <div class="icone">
+                <a href="https://www.youtube.com/channel/UCh0hogVKGu8Wx5i6lwudPEg" target="_blank"><img src="img/redes_sociais/004-youtube.png"></a>
         </div>
-        <!-- Grid container -->
     
-        <!-- Copyright -->
-        <div class="text-center">
-          futuros@neowners.com || © 2021 Neowners
-        </div>
-        <!-- Copyright -->
-      </footer>
-    </div>
+             <p class="identificacao">&COPY; 2021  Neowners</p>
+        </footer>
+  </div>
+
+    <script src="./js/darkMode.js"></script>
+    <script src="./js/colorRedOfTotal.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/index.js"></script>
+
+    <script src="./js/toastify.js"></script>
   </body>
   <img src="img/waves_svg/wave-recupere-senha.svg" alt="#" id="wave" />
-    <script src="js/script.js"></script>
-    <script src="js/validacao.js"></script>
 </html>

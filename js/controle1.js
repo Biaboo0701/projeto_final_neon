@@ -61,6 +61,7 @@ class Produto {
     }
   }
 
+  //
   adicionar(produto) {
     produto.preco = parseInt(produto.preco)
     this.arrayProdutos.push(produto)
