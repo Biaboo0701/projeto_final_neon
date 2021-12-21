@@ -1,38 +1,53 @@
- <!DOCTYPE html>
-  <html lang="pt-br">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-      <link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="./css/filter.css" />
-      <link rel="stylesheet" href="./css/toastify.css" />
-      <link rel="stylesheet" href="./css/button-dark.css" />
-  
-      <!-- Google Fonts -->
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
-        rel="stylesheet"
-      />
-  
-      <!-- Icons -->
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous"
-      />
-  
-      <title>neowners$</title>
-    </head>
-  
-    <body>
-      <header>
-        <div>
-          <a href="#" class="navbar-brand"
-          ><img src="img/logo.png" alt="Logo neowners" class="logo"/></a>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/filter.css" />
+    <link rel="stylesheet" href="./css/toastify.css" />
+    <link rel="stylesheet" href="./css/button-dark.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <title>neowners$</title>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <a href="#" class="navbar-brand"
+        ><img src="img/logo.png" alt="Logo neowners" class="logo"/></a>
+      </div>
+  </header>
+
+    <main class="container">
+      <section id="balance">
+        <h2 class="sr-only">Balanço</h2>
+
+        <div class="card">
+          <h3>
+            <span>Entradas</span>
+            <img src="./assets/income.svg" alt="Image de entrada" />
+          </h3>
+
+          <p id="incomeDisplay">R$ 0,00</p>
         </div>
+<<<<<<< HEAD
         <button class="botao-sair"><a href="index1.html">Sair</a></button>
     </header>
     
@@ -64,19 +79,78 @@
               <img src="./assets/total.svg" alt="Image do total" />
             </h3>
             <p id="totalDisplay">R$ 0,00</p>
+=======
+
+        <div class="card">
+          <h3>
+            <span>Saídas</span>
+            <img src="./assets/expense.svg" alt="Image de saida" />
+          </h3>
+          <p id="expenseDisplay">R$ 0,00</p>
+        </div>
+
+        <div class="card total">
+          <h3>
+            <span>Total</span>
+            <img src="./assets/total.svg" alt="Image do total" />
+          </h3>
+          <p id="totalDisplay">R$ 0,00</p>
+        </div>
+      </section>
+
+      <section id="transactions">
+        <h2 class="sr-only">Transações</h2>
+
+        <div id="row">
+          <a onclick="Modal.toogle" class="button new" href="#"
+            >+ Nova transação</a
+          >
+
+          <div id="dark_mode-button">
+>>>>>>> 5d773888349668b56f03506c9e01490a3bc16559
           </div>
-        </section>
-  
-        <section id="transactions">
-          <h2 class="sr-only">Transações</h2>
-  
-          <div id="row">
-            <a onclick="Modal.toogle" class="button new" href="#"
-              >+ Nova transação</a
-            >
-  
-            <div id="dark_mode-button">
+        </div>
+
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>descrição</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th id="content-icons-filter"></th>
+            </tr>
+          </thead>
+
+          <tfoot>
+            <tr>
+              <td>
+                Click na descrição do item para editar.
+              </td>
+            </tr>
+          </tfoot>
+
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div class="form">
+          <h2>Nova transação</h2>
+
+          <form action="#" onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label for="description" class="sr-only">Descrição</label>
+              <input
+                type="text"
+                name="description"
+                id="description"
+                maxlength="50"
+                placeholder="Descrição"
+              />
             </div>
+<<<<<<< HEAD
           </div>
   
           <table id="data-table">
@@ -147,6 +221,39 @@
               </div>
             </form>
           </div>
+=======
+
+            <div class="input-group">
+              <label for="amount" class="sr-only">Valor</label>
+              <input
+              oninput="maxLengthCheck(this)"
+                type="number"
+                name="amount"
+                id="amount"
+                maxlength = "12"
+                max = "999999999999"
+                placeholder="0,00"
+                step="0.01"
+              />
+              <small class="help"
+                >Use o sinal de - (negativos) para despesas e , virgula para
+                casas decimais</small
+              >
+            </div>
+
+            <div class="input-group">
+              <label for="date" class="sr-only">Data</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="input-group actions">
+              <a onclick="Modal.toogle" href="#" class="button cancel"
+                >Cancelar</a
+              >
+              <button type="submit">Salvar</button>
+            </div>
+          </form>
+>>>>>>> 5d773888349668b56f03506c9e01490a3bc16559
         </div>
       </div>
   

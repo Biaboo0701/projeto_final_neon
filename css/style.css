@@ -32,6 +32,7 @@ header {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .botao-sair {
   width: 3rem;
   border-radius: 20px;
@@ -51,6 +52,8 @@ header {
   color: black;
 }
 
+=======
+>>>>>>> 5d773888349668b56f03506c9e01490a3bc16559
 nav {
   width: 100%;
   margin-bottom: 2rem;
