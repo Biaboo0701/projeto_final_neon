@@ -84,7 +84,8 @@ form input[class='submit'] {
   margin: 1% 0;
 }
 
-form input[class='voltar'] {
+.voltar {
+  text-decoration: none;
   width: 100%;
   height: 40px;
   cursor: pointer;
@@ -101,8 +102,9 @@ form input[class='submit']:hover {
   background-color: #e6b400;
 }
 
-form input[class='voltar']:hover {
+.voltar:hover {
   background-color: #d0cbc6;
+  color: black;
 }
 
 footer {

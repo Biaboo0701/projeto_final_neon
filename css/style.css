@@ -32,7 +32,23 @@ header {
   text-align: center;
 }
 
-.nav-link {
+.botao-sair {
+  width: 3rem;
+  border-radius: 20px;
+  background-color: #ffc800;
+}
+
+.botao-sair:hover {
+  background-color: #e6b400;
+}
+
+.botao-sair a {
+  text-decoration: none;
+  color: black;
+}
+
+.botao-sair a:hover {
+  color: black;
 }
 
 nav {

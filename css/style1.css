@@ -60,9 +60,10 @@ form input[type='password'] {
   margin: 10px 0;
 }
 
-form input[type='submit'] {
+.submit {
   width: 100%;
   height: 30px;
+  text-decoration: none;
   cursor: pointer;
   background-color: #ffc800;
   color: black;
@@ -71,7 +72,7 @@ form input[type='submit'] {
   transition: 1s;
 }
 
-form input[type='submit']:hover {
+.submit:hover {
   background-color: #e6b400;
 }
 
@@ -85,10 +86,7 @@ form input[type='submit']:hover {
 }
 
 .opcionais {
-  display: flex;
   width: 10rem;
-  justify-content: space-around;
-  align-content: space-around;
 }
 
 .cadastre-se,
